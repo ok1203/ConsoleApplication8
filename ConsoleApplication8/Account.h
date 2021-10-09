@@ -5,7 +5,7 @@ using namespace std;
 
 class Account
 {
-private:
+protected:
 	vector<double> balance;
 	double dollars;
 	double euro;
@@ -13,12 +13,12 @@ private:
 	string name;
 public:
 	explicit Account();
-	explicit Account(string name, vector<double> balance, double euro, double tenge, double dollars);
+	explicit Account(string name, vector<double> balance);
 	virtual bool withdraw(double sumTenge, double sumDollars, double sumEuro)
 	{
 		vector<double> temp = { getTenge() - sumTenge, getDollars() - sumDollars, getEuro() - sumEuro };
 		setBalance(temp);
-		setTenge((temp)[0]);
+		setTenge(temp[0]);
 		setDollars(temp[1]);
 		setEuro(temp[2]);
 		return 1;
@@ -33,7 +33,7 @@ public:
 		return 1;
 	};
 	vector<double> getBalance();
-	double getDollars();
+	const double getDollars() ;
 	double getTenge();
 	double getEuro();
 	string getName();

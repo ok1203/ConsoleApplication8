@@ -142,12 +142,16 @@
     <ClCompile Include="Account.cpp" />
     <ClCompile Include="CheckingAccount.cpp" />
     <ClCompile Include="ConsoleApplication8.cpp" />
+    <ClCompile Include="I_Printable.cpp" />
+    <ClCompile Include="Redistribution.cpp" />
     <ClCompile Include="SavingsAccount.cpp" />
     <ClCompile Include="TrustAccount.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Account.h" />
     <ClInclude Include="CheckingAccount.h" />
+    <ClInclude Include="I_Printable.h" />
+    <ClInclude Include="Redistribution.h" />
     <ClInclude Include="SavingsAccount.h" />
     <ClInclude Include="TrustAccount.h" />
   </ItemGroup>

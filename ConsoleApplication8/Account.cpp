@@ -9,12 +9,12 @@ Account::Account()
 	tenge = 0;
 }
 
-Account::Account(string name, vector<double> balance, double euro, double tenge, double dollars) {
+Account::Account(string name, vector<double> balance) {
 	this->name = name;
 	this->balance = balance;
-	this->tenge = tenge;
-	this->euro = euro;
-	this->dollars = dollars;
+	this->tenge = balance[0];
+	this->euro = balance[2];
+	this->dollars = balance[1];
 }
 
 vector<double> Account::getBalance()
@@ -22,7 +22,7 @@ vector<double> Account::getBalance()
 	return balance;
 }
 
-double Account::getDollars()
+const double Account::getDollars()
 {
 	return dollars;
 }
